@@ -11,6 +11,8 @@ screen.setup(width=600, height=600)
 screen.tracer(0)
 
 mandy_the_turtle = Player()
+cars = CarManager()
+cars.car_create()
 
 
 
@@ -22,3 +24,5 @@ screen.onkey(mandy_the_turtle.move_up, "Up")
 while game_is_on:
     time.sleep(0.1)
     screen.update()
+    cars.car_move()
+
