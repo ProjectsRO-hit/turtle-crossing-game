@@ -1,8 +1,5 @@
 import time
 from turtle import Screen
-
-import player
-import scoreboard
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
@@ -31,6 +28,7 @@ while game_is_on:
     #detect collision
     for car in cars.all_cars:
         if car.distance(mandy_the_turtle) < 30:
+            scoreboard.game_over()
             game_is_on = False
 
     #player reaching other side
