@@ -14,10 +14,11 @@ class CarManager(Turtle):
 
     def car_create(self):
         self.shape("square")
+        self.color(rd.choice(COLORS))
         self.shapesize(stretch_wid=1, stretch_len=2)
         self.penup()
         self.setheading(180)
-        self.goto(300, 0)
+        self.goto(300, rd.choice(range(-250, 250, 20)))
 
 
 
